@@ -34,7 +34,7 @@ AWS Step Functions is a low-code, visual workflow service that developers use to
 8) Select `Author from scratch` and enter the function name as `cancelOrder`. Choose `runtime` as `NodeJS 14.x`. Choose `Architecture` as `x86_64`. Leave other values as default and click on `Create function`.
 9) Update the function code with the following:
     ```javascript    
-    exports.completeOrder = async(event)=>{
+    exports.cancelOrder = async(event)=>{
     
         //Log event
         console.log("Received event from step function:", event);

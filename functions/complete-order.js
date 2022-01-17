@@ -6,12 +6,10 @@ exports.completeOrder = async (event) => {
 
     //Create response
     let data = {
-        orderId: event.orderId,
-        customerName: event.customerName,
-        orderDate: event.orderDate,
-        orderAmount: event.amount,
+        ...event,
         status: "Approved"
     }
+    //Other task here (eg:Delivery date calculation)
     //update orders table to store order details
     let response = {
         message: "Your order is approved and it will be delivered soon",
